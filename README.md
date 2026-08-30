@@ -2,9 +2,11 @@
 
 This public repository hosts the privacy policy for the Android app **Clarity** (`com.thom.clarity`).
 
-Public policy URL after GitHub Pages deployment:
+Public policy URL on GitHub Pages:
 
-- <https://thomas-nicholson.github.io/clarity-privacy/>
+- <https://teejay.dev/clarity-privacy/>
+
+The GitHub account currently maps Pages through `teejay.dev`; the content itself is built and served by GitHub Pages rather than the Clarity app server or agent host.
 
 ## Updating the policy
 
