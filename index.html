@@ -46,7 +46,7 @@
   <header>
     <h1>Clarity Privacy Policy</h1>
     <p class="meta">For the Android app <strong>Clarity</strong> (<code>com.thom.clarity</code>)</p>
-    <p class="meta">Last updated: 29 August 2026</p>
+    <p class="meta">Last updated: 2 September 2026</p>
     <div class="summary">
       <strong>Summary:</strong> Clarity has no account, advertising SDK, developer-operated backend or automatic crash reporting. Your configured focus sessions stay in the app's private storage. Foreground app and browser address-bar observations are compared locally and immediately discarded.
     </div>
@@ -60,6 +60,7 @@
   <ul>
     <li>session names, colours, selected weekdays, start times and finish times;</li>
     <li>selected app package names and website hosts;</li>
+    <li>successfully retrieved website icons in Clarity's temporary private cache;</li>
     <li>your penalty choice, Temporary Unblock time and notification preference; and</li>
     <li>local Google Play purchase-recovery records, including product identifiers, the price and currency shown, request timing, purchase status and purchase tokens.</li>
   </ul>
@@ -74,7 +75,7 @@
   <p>Clarity receives purchase results from Google Play and keeps the minimum local recovery information described above to prevent duplicate fulfilment and safely resume interrupted purchases. Purchase processing is governed by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and applicable Google Play terms.</p>
 
   <h2>Network use and external links</h2>
-  <p>Clarity does not contact saved website hosts to retrieve icons. Website, social-media and Google Play listing links open only when you choose them. Those external services apply their own privacy policies.</p>
+  <p>When Clarity displays an uncached saved website, Clarity contacts that website host directly over HTTPS to retrieve its conventional favicon. A successful image is cached in Clarity's private app cache and treated as fresh for 30 days so it can be reused without another request. A stale cached image may remain visible while Clarity attempts a refresh; Android or the user may clear the cache at any time. Clarity does not send saved website hosts to Google or another third-party favicon service. Website, social-media and Google Play listing links open only when you choose them. Those external services apply their own privacy policies.</p>
 
   <h2>Notifications</h2>
   <p>If enabled, Clarity uses an on-device Android notification to show the active session name and finish time, or a paused state during Temporary Unblock. Notification content is generated locally and is not sent to the developer.</p>
