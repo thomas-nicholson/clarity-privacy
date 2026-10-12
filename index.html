@@ -46,7 +46,7 @@
   <header>
     <h1>Clarity Privacy Policy</h1>
     <p class="meta">For the Android app <strong>Clarity</strong> (<code>com.thom.clarity</code>)</p>
-    <p class="meta">Last updated: 2 September 2026</p>
+    <p class="meta">Last updated: 13 October 2026</p>
     <div class="summary">
       <strong>Summary:</strong> Clarity has no account, advertising SDK, developer-operated backend or automatic crash reporting. Your configured focus sessions stay in the app's private storage. Foreground app and browser address-bar observations are compared locally and immediately discarded.
     </div>
@@ -61,7 +61,8 @@
     <li>session names, colours, selected weekdays, start times and finish times;</li>
     <li>selected app package names and website hosts;</li>
     <li>successfully retrieved website icons in Clarity's temporary private cache;</li>
-    <li>your penalty choice, Temporary Unblock time and notification preference; and</li>
+    <li>your penalty choice, Temporary Unblock time and notification preference;</li>
+    <li>a bounded private diagnostic log of blocking-service lifecycle, recovery attempts, error types and app-owned stack locations, plus Android process-exit reason metadata when available; and</li>
     <li>local Google Play purchase-recovery records, including product identifiers, the price and currency shown, request timing, purchase status and purchase tokens.</li>
   </ul>
   <p>Android backup is disabled for Clarity. This local information remains until you edit or delete it, clear Clarity's app storage, or uninstall the app. Clarity has no user account and does not send this information to a developer-operated server.</p>
@@ -78,10 +79,11 @@
   <p>When Clarity displays an uncached saved website, Clarity contacts that website host directly over HTTPS to retrieve its conventional favicon. A successful image is cached in Clarity's private app cache and treated as fresh for 30 days so it can be reused without another request. A stale cached image may remain visible while Clarity attempts a refresh; Android or the user may clear the cache at any time. Clarity does not send saved website hosts to Google or another third-party favicon service. Website, social-media and Google Play listing links open only when you choose them. Those external services apply their own privacy policies.</p>
 
   <h2>Notifications</h2>
-  <p>If enabled, Clarity uses an on-device Android notification to show the active session name and finish time, or a paused state during Temporary Unblock. Notification content is generated locally and is not sent to the developer.</p>
+  <p>If enabled, Clarity uses an on-device Android notification to show the active session name and finish time, or a paused state during Temporary Unblock. A separate blocking-health notification can warn when the engine is unavailable, if Android permits notifications and runs the background check. Android may delay checks; no instant detection or recovery is guaranteed, and force-stop prevents checks until the app is reopened. Notification content is generated locally and is not sent to the developer.</p>
 
   <h2>Crash reports and support</h2>
-  <p><strong>Nothing is sent automatically.</strong> When you choose <em>Report an issue</em>, Clarity opens your email app with an editable draft. You decide whether to send it and can remove any content first. The draft may include the Clarity version, Android version, device manufacturer and model, and installer. Information you choose to email is handled by your email provider and is used only to respond to your request.</p>
+  <p>Clarity keeps a bounded private diagnostic log so technical blocking failures can be investigated. Old entries are replaced automatically. It records lifecycle and recovery timestamps, error types and app-owned stack locations, not raw exception messages or Android trace files. Android 11 and later may also provide recent process-exit reason, timing and resource metadata. No observed app names, URLs, node text or purchase tokens are included in diagnostics.</p>
+  <p><strong>Nothing is sent automatically.</strong> When you choose <em>Report an issue</em>, Clarity opens your email app with an editable draft. You decide whether to send it and can remove any content first. The draft may include the Clarity version, Android version, device manufacturer and model, installer, current service health and the local diagnostics described above. Copy diagnostics puts those details on the clipboard only when you choose it. Information you choose to email is handled by your email provider and is used only to respond to your request.</p>
 
   <h2>Data collection and sharing</h2>
   <p>Clarity does not collect user data for the developer and does not share user data with other companies or organisations. This matches the app's current Google Play Data Safety declaration. Google Play separately processes information supplied directly to it for app distribution and payment transactions.</p>
